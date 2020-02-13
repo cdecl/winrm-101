@@ -97,6 +97,14 @@ winrm configSDDL default
 ---
 
 ### PowerShell 원격 명령 및 파일 복사 
+- Enable-PSRemoting  
+This command starts the WinRM service, sets it to start automatically with your system, and creates a firewall rule that allows incoming connections. The -Force part of the cmdlet tells PowerShell to perform these actions without prompting you for each step.
+
+```
+Enable-PSRemoting -Force
+```
+
+
 - 원격 명령 
 ```
 Invoke-Command -ComputerName ServerHost -ScriptBlock { dir d:\ }
